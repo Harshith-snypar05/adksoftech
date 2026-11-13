@@ -2,11 +2,13 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 import { ArrowRight, Eye, Gem, Target, MapPin } from 'lucide-react'
 import { MAP_LINK, SITE } from '@/lib/site'
+import { pageMeta } from '@/lib/seo'
 
-export const metadata: Metadata = {
-  title: 'About',
-  description: `About ${SITE.name} — a software engineering and IT staffing company based in Hyderabad, India.`,
-}
+export const metadata: Metadata = pageMeta(
+  'About Us',
+  `About ${SITE.name} — a software engineering, AI and IT staffing company based in HITEC City, Hyderabad, India.`,
+  '/about',
+)
 
 const PILLARS = [
   { icon: Target, title: 'Mission', text: 'Help businesses build smarter with technology that is dependable, maintainable and built to last.' },

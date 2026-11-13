@@ -2,11 +2,13 @@ import type { Metadata } from 'next'
 import { Mail, MapPin, ArrowUpRight } from 'lucide-react'
 import ContactForm from '@/components/ContactForm'
 import { MAP_EMBED, MAP_LINK, SITE } from '@/lib/site'
+import { pageMeta } from '@/lib/seo'
 
-export const metadata: Metadata = {
-  title: 'Contact',
-  description: `Contact ${SITE.name} for software development, AI, cloud and IT staffing. Based in HITEC City, Hyderabad, India.`,
-}
+export const metadata: Metadata = pageMeta(
+  'Contact Us',
+  `Contact ${SITE.name} for software development, AI, cloud and IT staffing. Visit us in HITEC City, Hyderabad, India or email ${SITE.email}.`,
+  '/contact',
+)
 
 export default function ContactPage() {
   return (

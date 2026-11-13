@@ -2,15 +2,18 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 import { ArrowRight, Check } from 'lucide-react'
 import { SERVICES, SITE } from '@/lib/site'
+import { SERVICES_LD, jsonLd, pageMeta } from '@/lib/seo'
 
-export const metadata: Metadata = {
-  title: 'Services',
-  description: `Services from ${SITE.name}: product engineering, AI, cloud and DevOps, enterprise integration, application support and IT staffing.`,
-}
+export const metadata: Metadata = pageMeta(
+  'Software, AI, Cloud & IT Staffing Services',
+  `Services from ${SITE.name}: technology consulting, product engineering, AI, cloud and DevOps, enterprise integration, application maintenance and IT staffing in Hyderabad.`,
+  '/services',
+)
 
 export default function ServicesPage() {
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: jsonLd(SERVICES_LD) }} />
       <section className="border-b border-navy/10 bg-navy-50">
         <div className="container-x py-16 lg:py-24">
           <p className="kicker">Services</p>
