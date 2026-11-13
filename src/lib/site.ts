@@ -4,7 +4,7 @@ export const SITE = {
   description:
     'ADK Softech builds software, AI solutions and engineering teams for businesses — from product engineering and cloud to application support and IT staffing.',
   url: 'https://adksoftech.com',
-  email: 'contact@snypartech.com',
+  email: 'contact@adksoftech.com',
   addressLines: [
     '3U Unit, 3rd Floor, Dwaraka Pride',
     'Plot No.4/1, Survey No.64',
